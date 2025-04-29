@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        .print, .println, .printd, .printlnd, .error{
+            width: 50%;
+            justify-self: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class ="navbar navbar-expand-sm justify-content-center bg-dark">
+        <ul class = "nav">
+            <li class ="nav-item">
+                <a href="index.html" class = "nav-link text-light">Головна</a>
+            </li>
+            <li class ="nav-item">
+                <a href="AboutUs.html" class = "nav-link text-light">Про нас</a>
+            </li>
+            <li class ="nav-item">
+                <a href="doc.html" class = "nav-link text-light">Документація</a>
+            </li>
+            <li class ="nav-item">
+                <a href="redactor.html" class = "nav-link text-light">Редактор</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Розділи</h1>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="dropdown">
+                <a href="" class = "nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    Старт
+                </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Створення проєкту</a></li>
+                    <li><a class="dropdown-item" href="#">Пояснення GUI</a></li>
+                    <li><a class="dropdown-item" href="#">Перша програма</a></li>
+                  </ul>
+            </div>
+            <div class="dropdown">
+                <a href="" class = "nav-link" data-bs-toggle="dropdown">
+                    Основи програмування
+                </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="write.html">Вивід ввід</a></li>
+                    <li><a class="dropdown-item" href="#">Створення об'єктів за допомогою коду</a></li>
+                    <li><a class="dropdown-item" href="#">Фізика</a></li>
+                  </ul>
+            </div>
+        </div>
+      </div>
+      <button class="button btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        Оберіть розділ
+      </button>
+
+    <div class = "print alert alert-light">
+        <h2>Print</h2>
+        <p>print() - ця команда потрібна для виводу тексту без переходу на новий рядок. <br />
+        Приклад: print("Hello World");
+        </p>
+        <h3>Принцип роботи</h3>
+        <p>Ви маєте відкрити консоль. Для цього натисніть на праву клавішу миші -> перевірити -> Console.</p>
+    </div>
+    <div class = "println alert alert-light">
+
+        <h2>Println</h2>
+        <p>println() -  ця команда потрібна для виводу тексту з переходом на новий рядок. <br />
+        Приклад: println("Hello World");
+        <h3>Принцип роботи</h3>
+        <p>Ви маєте відкрити консоль. Для цього натисніть на праву клавішу миші -> перевірити -> Console.</p>
+    </p>
+    </div>
+    <div class="printd alert alert-light">
+        <h2>Printd</h2>
+        <p>printd() - ця команда виводить текст на сторінку. Приклад: printd("Hello World");</p>
+        <h3>Принцип роботи</h3>
+        <p>Ви вводите команду і цей текст з'являється у Вас на екрані.</p>
+    </div>
+    <div class="printlnd alert alert-light">
+        <h2>Printlnd</h2>
+        <p>printd() - ця команда виводить текст на сторінку з переходом на новий рядок. Приклад: printd("Hello World");</p>
+        <h3>Принцип роботи</h3>
+        <p>Ви вводите команду і цей текст з'являється у Вас на екрані.</p>
+    </div>
+    <div class = "error alert alert-light">
+        <h2>Error</h2>
+        <p>error() - ця команда потрібна для знаходження помилок при виконанні коду. <br />
+        Приклад:<br /> 
+        let a = 9;<br />
+        if(a != 9){<br />
+            error("a != 9");<br />
+        }</p>
+    </div>
+</body>
+</html>
