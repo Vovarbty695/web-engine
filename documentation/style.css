@@ -1,0 +1,14 @@
+.print, .println, .printd, .printlnd, .error, .Prymitka, .rect, .text, .image, .variable, .const, .types{
+    width: 50%;
+    justify-self: center;
+    text-align: center;
+}
+
+.typeTable{
+    border: black 1px solid;
+    justify-self: center;
+}
+
+.typeTable tr td{
+    border: black 1px solid;
+}

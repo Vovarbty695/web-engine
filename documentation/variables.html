@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Figures</title>
+    <title>Variables</title>
 </head>
 <body>
     <nav class ="navbar navbar-expand-sm justify-content-center bg-dark">
@@ -56,57 +56,60 @@
       <button class="button btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
         Оберіть розділ
       </button>
-      <div class="Prymitka alert alert-info">
-        <h2><strong>Примітка!</strong></h2>
-        <p>Перед використанням будь-якої з цих функцій напишіть initC();</p>
+    <div class="variable alert alert-light">
+        <h2>Проста змінна</h2>
+        <p>Для створення змінної, яка може змінюватися далі по-ходу програми, використовується:<br />
+        <cite>let назва_змінної = значення змінної</cite><br /></p>
+        <h3>Приклад</h3>
+        let age = 18;
+        let name = "Alexandr";
+        let isSleep = true;
+    </div>
+    <div class = "const alert alert-light">
+        <h2>Константа</h2>
+        <p>На відміну звичайній змінній, const(константа) не може змінюватися по-ходу. Вона ініціалізується лише раз.<br />
+        Створюється за таким принципом: <br />
+        const назва_константи = значення;    
+    </p>
+    <h3>Приклад</h3>
+    <p>const PI = 3.14;</p>
+    </div>
 
-      </div>
-      <div class = "rect alert alert-light">
-        <h2>Прямокутник</h2>
-
-        <p>Для відмальовки прямокутника використовується команда rect(), далі йдуть значення:<br />
-        <cite>
-            x - позиція по вісі х.<br />
-            y - позиція по вісі y.<br />
-            width - ширина.<br />
-            height - висота.<br />
-            color - колір.
-        </cite>    
-        </p>
-        <p><strong>Приклад: </strong> rect(20, 20, 50, 20, "red");</p>
-      </div>
-      <div class = "text alert alert-light">
-        <h2>Текст</h2>
-        <p>Текст в іграх вважається елементом UI(user interface(користувацький інтерфейс)). <br />
-        Для його відмальовки використовується функція text(). Значення: <br />
-        <cite>
-            text - текст, який хочемо вивести".<br />
-            x - позиція по вісі х.<br />
-            y - позиція по вісі y.<br />
-            font - шрифт(його назва і розмір).<br />
-            color - колір.
-        </cite>
-        <strong>Приклад: </strong>text("hello world", 20, 20, "30px Arial, "black");
-        </p>
-      </div>
-      <div class="image alert alert-light">
-        <h2>Зображення</h2>
-        <p>Ця функція має два варіанти: <br />
-        1)image(path, x, y);
-        <cite>
-            path - шлях до зображення.<br />
-            x - позиція по вісі х.<br />
-            y - позиція по вісі y.<br />
-        </cite>
-        2) image(path, x, y, width, height);
-        <cite>
-            path - шлях до зображення.<br />
-            x - позиція по вісі х.<br />
-            y - позиція по вісі y.<br />
-            width - ширина.<br />
-            height - висота. <br />
-        </cite>    
-        </p>
-      </div>
+    <div class="types alert alert-light">
+        <h2>Типи змінних в KavaScript(API для JavaScript)</h2>
+        <table class = "typeTable">
+            <tr>
+                <th>Назва</th>
+                <th>Значення</th>
+                <th>Приклад</th>
+              </tr>
+              <tr>
+                <td>int</td>
+                <td>Треба для цілих чисел</td>
+                <td>let a = 1.5;</td>
+              </tr>  
+              <tr>
+                <td>float</td>
+                <td>Треба для чисел з точкою</td>
+                <td>let a = 1.5;</td>
+              </tr>  
+              <tr>
+                <td>string</td>
+                <td>Треба для рядків тексту.<br /> Є масивом від char.</td>
+                <td>let a = "hello world";</td>
+              </tr>
+              <tr>
+                <td>char</td>
+                <td>Треба для лиш одного символу</td>
+                <td>let a = 'a';</td>
+              </tr>
+              <tr>
+                <td>bool</td>
+                <td>Треба для перевірки правди чи хиби</td>
+                <td>let a = true;<br />
+                let b = false;</td>
+              </tr>
+        </table>
+    </div>
 </body>
 </html>
