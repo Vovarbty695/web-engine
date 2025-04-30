@@ -19,6 +19,12 @@
             font-size: 16px;
             cursor: pointer;
         }
+        #saveButton {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
         #output {
             margin-top: 10px;
             padding: 10px;
@@ -54,12 +60,14 @@
 // gameLoop(); // Запуск симуляції, якщо потрібно
 </textarea>
     <button id="runButton" class="btn btn-primary">Запустити код</button>
+    <button id="saveButton" class="btn btn-success">Зберегти проєкт</button>
     <pre id="output"></pre>
     <canvas id="GameWindow" width="800" height="600"></canvas>
 
     <script>
         const codeEditor = document.getElementById('codeEditor');
         const runButton = document.getElementById('runButton');
+        const saveButton = document.getElementById('saveButton');
         const outputDiv = document.getElementById('output');
         const gameCanvas = document.getElementById('GameWindow');
         const gameContext = gameCanvas.getContext('2d');
@@ -195,6 +203,14 @@
 
         initC();
 
+        // Завантаження збереженого коду з localStorage при завантаженні сторінки
+        window.onload = function() {
+            const savedCode = localStorage.getItem('savedCode');
+            if (savedCode) {
+                codeEditor.value = savedCode;
+            }
+        };
+
         runButton.addEventListener('click', function () {
             const codeToRun = codeEditor.value;
             outputDiv.textContent = "Виконується код...\n";
@@ -210,6 +226,12 @@
                 console.error("Помилка виконання коду:", error);
                 outputDiv.textContent += "\nПомилка виконання: " + error;
             }
+        });
+
+        saveButton.addEventListener('click', function() {
+            const codeToSave = codeEditor.value;
+            localStorage.setItem('savedCode', codeToSave);
+            print("Проєкт збережено!");
         });
     </script>
 </body>
